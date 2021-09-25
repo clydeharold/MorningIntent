@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.provider.AlarmClock;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,8 +14,9 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     EditText txtHour, txtMinutes, txtMessage;
-    Button cmdSetAlarm;
+    Button cmdSetAlarm, cmdExplicit;
     //Added comment for git visibility
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         refs();
 
+        cmdExplicit.setOnClickListener(startNewActivity);
         cmdSetAlarm.setOnClickListener(setAlarm);
     }
 
@@ -49,5 +53,19 @@ public class MainActivity extends AppCompatActivity {
         txtMinutes = findViewById(R.id.txtMinutes);
         txtMessage = findViewById(R.id.txtMessage);
         cmdSetAlarm = findViewById(R.id.cmdSetAlarm);
+        cmdExplicit = findViewById(R.id.cmdExplicit);
+        txtMessage = findViewById(R.id.txtMessage);
     }
+
+    View.OnClickListener startNewActivity = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            String str = txtMessage.getText().toString();
+
+            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+            intent.putExtra("msg", str);
+            startActivity(intent);
+        }
+    };
 }

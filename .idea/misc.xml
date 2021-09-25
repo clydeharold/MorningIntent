@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+        <entry key="..\:/ApplicationDevelopment/MorningIntent/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/ApplicationDevelopment/MorningIntent/app/src/main/res/layout/activity_main2.xml" value="0.13020833333333334" />
+        <entry key="..\:/ApplicationDevelopment/MorningIntent/app/src/main/res/layout/activity_second.xml" value="0.2" />
+=======
         <entry key="..\:/ApplicationDevelopment/MorningIntent/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
+>>>>>>> 67d99074600b8936d2ada5f5d32d21643daaea38
       </map>
     </option>
   </component>
